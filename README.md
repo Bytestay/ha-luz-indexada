@@ -3,6 +3,8 @@
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/docs/faq/custom_repositories)
 [![Validate](https://github.com/bytestay/ha-luz-indexada/actions/workflows/validate.yml/badge.svg)](https://github.com/bytestay/ha-luz-indexada/actions/workflows/validate.yml)
 [![Tests](https://github.com/bytestay/ha-luz-indexada/actions/workflows/tests.yml/badge.svg)](https://github.com/bytestay/ha-luz-indexada/actions/workflows/tests.yml)
+[![Release](https://img.shields.io/github/v/release/bytestay/ha-luz-indexada)](https://github.com/bytestay/ha-luz-indexada/releases)
+[![License: MIT](https://img.shields.io/github/license/bytestay/ha-luz-indexada)](LICENSE)
 
 The **real final electricity price, every 15 minutes**, for Portuguese indexed (dynamic) tariffs, in Home Assistant.
 
