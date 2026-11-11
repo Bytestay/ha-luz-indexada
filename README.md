@@ -290,6 +290,10 @@ Security issues go by email, never in a public issue.
 
 Contact: hello@bytestay.pt · Licence: MIT
 
+## History
+
+Formerly Hybrid Forge Lab. This repository continues `hybridforgelab/ha-luz-indexada` under the ByteStay name since November 2026, so the older commits come from there.
+
 ---
 
 ## Português
@@ -342,3 +346,7 @@ em todos os ciclos: simples, bi-horário e tri-horário, diário ou semanal.
 - **Contribuir:** issues e pull requests são bem-vindos (em português ou inglês); ver o [guia de contribuição](https://github.com/bytestay/.github/blob/main/CONTRIBUTING.md). Questões sobre a API Luz Indexada vão para a [página de contacto](https://luz.bytestay.pt/pt/contact.html).
 
 Preços: OMIE (www.omie.es). Contacto: hello@bytestay.pt
+
+## Histórico
+
+Antes Hybrid Forge Lab. Este repositório continua o `hybridforgelab/ha-luz-indexada` com o nome ByteStay desde novembro de 2026, por isso os commits mais antigos vêm de lá.
