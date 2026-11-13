@@ -4,7 +4,8 @@
 # nomes traduzidos (…_preco_atual, …_custo_mensal_estimado_…). Com o HA em inglês use dashboard.yaml.
 #
 # Requisitos
-#   * apexcharts-card (HACS → Frontend → "apexcharts-card"). O HACS regista o recurso Lovelace; numa
+#   * apexcharts-card (Definições → Marketplace → "apexcharts-card"; HACS → Frontend antes do 2026.11).
+#     Ambos registam o recurso Lovelace; numa
 #     instalação manual adicione /local/apexcharts-card.js como módulo JavaScript em
 #     Definições → Painéis → ⋮ → Recursos. Sem ele os três gráficos mostram "Configuration error".
 #   * "Comparar fornecedores" ligado (por omissão) para a secção de comparação.
