@@ -1,6 +1,6 @@
 # Luz Indexada for Home Assistant
 
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/docs/faq/custom_repositories)
+[![Home Assistant Marketplace](https://img.shields.io/badge/Marketplace-Custom-41BDF5.svg)](https://www.home-assistant.io/integrations/marketplace/)
 [![Validate](https://github.com/bytestay/ha-luz-indexada/actions/workflows/validate.yml/badge.svg)](https://github.com/bytestay/ha-luz-indexada/actions/workflows/validate.yml)
 [![Tests](https://github.com/bytestay/ha-luz-indexada/actions/workflows/tests.yml/badge.svg)](https://github.com/bytestay/ha-luz-indexada/actions/workflows/tests.yml)
 [![Release](https://img.shields.io/github/v/release/bytestay/ha-luz-indexada)](https://github.com/bytestay/ha-luz-indexada/releases)
@@ -58,18 +58,31 @@ Some tariffs are marked **estimate** (in the setup list and in the `status` / `e
 
 ## Installation
 
-With HACS installed, these two buttons do steps 2 and 4 for you:
+### Home Assistant 2026.11 and later (Marketplace)
 
-[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=bytestay&repository=ha-luz-indexada&category=integration)
-[![Open your Home Assistant instance and start setting up Luz Indexada.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=luz_indexada)
+1. **Settings → Marketplace → Add from link** → `bytestay/ha-luz-indexada`, type **Integration**.
+   The Marketplace may ask you to connect GitHub first.
+2. Install **Luz Indexada** and let the repair restart Home Assistant.
+3. Finish the setup page that opens, or later: **Settings → Devices & services → Add integration → Luz Indexada**.
+   This button opens that step:
+
+   [![Open your Home Assistant instance and start setting up Luz Indexada.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=luz_indexada)
+
+If you used HACS before, the Marketplace takes over the install on the first start after the update.
+
+### Older versions (HACS)
 
 1. Install [HACS](https://hacs.xyz/).
 2. HACS → ⋮ → **Custom repositories** → add `https://github.com/bytestay/ha-luz-indexada`, category
-   **Integration**.
+   **Integration**. This button does it for you:
+
+   [![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=bytestay&repository=ha-luz-indexada&category=integration)
 3. Install **Luz Indexada** and restart Home Assistant.
 4. **Settings → Devices & services → Add integration → Luz Indexada**.
 
-Manual install: copy `custom_components/luz_indexada` into your `config/custom_components/` folder and restart.
+### Manual
+
+Copy `custom_components/luz_indexada` into your `config/custom_components/` folder and restart.
 
 ## Configuration
 
@@ -176,8 +189,9 @@ Good to know:
 - the estimated monthly cost per supplier (chart and table, cheapest highlighted);
 - a short note on estimate versus exact.
 
-- It needs [apexcharts-card](https://github.com/RomRider/apexcharts-card) (HACS → Frontend).
-  HACS registers the Lovelace resource; on a manual install add it under Settings → Dashboards → ⋮ → Resources.
+- It needs [apexcharts-card](https://github.com/RomRider/apexcharts-card) (Settings → Marketplace, or HACS → Frontend
+  before 2026.11). Both register the Lovelace resource, unless your resources are managed in YAML; on a manual install
+  add it under Settings → Dashboards → ⋮ → Resources.
 - Paste it in the dashboard's raw configuration editor as a view.
 - If your Home Assistant is set to Portuguese, entity ids are created from the Portuguese names (`…_preco_atual`,
   `…_custo_mensal_estimado_…`): use [`examples/dashboard.pt.yaml`](examples/dashboard.pt.yaml) instead.
@@ -303,11 +317,14 @@ tarifários indexados em Portugal (Coopérnico, G9, Repsol, Galp, Endesa, EDP, A
 em todos os ciclos: simples, bi-horário e tri-horário, diário ou semanal.
 
 - **Instalação:**
-  - HACS → Repositórios personalizados → `https://github.com/bytestay/ha-luz-indexada` (Integração).
-  - Depois: Definições → Dispositivos e serviços → Adicionar integração → *Luz Indexada*.
-  - Com o HACS instalado, estes botões fazem os dois passos:
+  - Home Assistant 2026.11 ou mais recente: Definições → Marketplace → adicionar a partir de um link (canto superior
+    direito) → `bytestay/ha-luz-indexada`, tipo Integração. Instale e deixe a reparação reiniciar o Home Assistant.
+  - Versões anteriores: HACS → Repositórios personalizados → `https://github.com/bytestay/ha-luz-indexada`
+    (Integração), ou este botão:
 
     [![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=bytestay&repository=ha-luz-indexada&category=integration)
+  - Depois: Definições → Dispositivos e serviços → Adicionar integração → *Luz Indexada*, ou este botão:
+
     [![Open your Home Assistant instance and start setting up Luz Indexada.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=luz_indexada)
 - **Chave:** subscreva a API *Luz Indexada* no RapidAPI e cole a `X-RapidAPI-Key`. Uma instalação normal precisa do
   plano Pro; o Basic, com 15 pedidos/mês, serve só para experimentar.
@@ -329,7 +346,7 @@ em todos os ciclos: simples, bi-horário e tri-horário, diário ou semanal.
   - [`examples/dashboard.pt.yaml`](examples/dashboard.pt.yaml) se o Home Assistant estiver em português (os
     entity_id saem dos nomes traduzidos); [`examples/dashboard.yaml`](examples/dashboard.yaml) se estiver em inglês;
   - é uma vista Lovelace pronta a colar e precisa do [apexcharts-card](https://github.com/RomRider/apexcharts-card)
-    (HACS → Frontend), com o recurso Lovelace registado;
+    (Definições → Marketplace, ou HACS → Frontend antes do 2026.11), com o recurso Lovelace registado;
   - os ids correspondem a uma instalação de Galp Plano Flexível, ciclo simples. Para outro tarifário, substitua
     `galp_plano_flexivel_simples` pelo seu prefixo (Definições → Dispositivos e serviços → Luz Indexada →
     Entidades).

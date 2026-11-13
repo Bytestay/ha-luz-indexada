@@ -1,8 +1,8 @@
 # Luz Indexada: example dashboard (one Lovelace view, "sections" layout).
 #
 # Requirements
-#   * apexcharts-card (HACS → Frontend → "apexcharts-card"). HACS registers the Lovelace resource
-#     for you; on a manual install add /local/apexcharts-card.js as a JavaScript module under
+#   * apexcharts-card (Settings → Marketplace → "apexcharts-card"; HACS → Frontend before 2026.11).
+#     Both register the Lovelace resource for you; on a manual install add /local/apexcharts-card.js as a JavaScript module under
 #     Settings → Dashboards → ⋮ → Resources. Without it the three charts show "Custom element doesn't exist".
 #   * "Compare suppliers" turned on (the default) for the comparison section.
 #
