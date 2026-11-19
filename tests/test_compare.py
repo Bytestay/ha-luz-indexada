@@ -91,7 +91,7 @@ async def test_entities_and_call_budget(
     repsol = hass.states.get(f"{PREFIX}_average_price_today_repsol_leve_sem_mais")
     galp = hass.states.get(f"{PREFIX}_average_price_today_galp_plano_flexivel")
     g9 = hass.states.get(f"{PREFIX}_average_price_today_g9_smart_dynamic")
-    assert repsol.attributes["friendly_name"].endswith("Average price today — Repsol Leve Sem Mais")
+    assert repsol.attributes["friendly_name"].endswith("Average price today (Repsol Leve Sem Mais)")
     assert float(repsol.state) == pytest.approx(float(galp.state) * 0.9, rel=1e-4)
     assert float(galp.state) == pytest.approx(float(hass.states.get(f"{PREFIX}_today_average_price").state), rel=1e-6)
     assert len(repsol.attributes["raw_today"]) == 100 and repsol.attributes["raw_tomorrow"] == []

@@ -126,8 +126,8 @@ Each tariff and cycle is its own entry:
 | Tomorrow available | binary sensor | Tomorrow's prices are cached (`complete`, `slots_priced`) |
 | API calls this month | diagnostic sensor | Counted locally; `next_tomorrow_attempt`, `backoff_until`, `last_error` |
 | RapidAPI requests remaining | diagnostic sensor | From RapidAPI's quota headers (RapidAPI mode only) |
-| Average price today — *supplier* | sensor, `EUR/kWh` | One per comparable tariff; `raw_today` / `raw_tomorrow` curves, `status`, `estimate` |
-| Estimated monthly cost — *supplier* | sensor, `€` | One per comparable tariff; `saving_vs_selected`, VAT split, `monthly_kwh`, `kva` |
+| Average price today (*supplier*) | sensor, `EUR/kWh` | One per comparable tariff; `raw_today` / `raw_tomorrow` curves, `status`, `estimate` |
+| Estimated monthly cost (*supplier*) | sensor, `€` | One per comparable tariff; `saving_vs_selected`, VAT split, `monthly_kwh`, `kva` |
 | Cheapest supplier | sensor | Name of the cheapest tariff; `tariffs` list with cost, saving and status |
 
 Attributes of **Current price**:
@@ -153,10 +153,10 @@ That is the same number of requests: one response has all the tariffs (about 20 
 
 Every tariff that is still on sale gets:
 
-- **Average price today — *supplier*** (e.g. `sensor.luz_indexada_galp_plano_flexivel_simples_average_price_today_repsol_leve_sem_mais`):
+- **Average price today (*supplier*)** (e.g. `sensor.luz_indexada_galp_plano_flexivel_simples_average_price_today_repsol_leve_sem_mais`):
   today's mean price, VAT per your option, with `raw_today` / `raw_tomorrow` in the same `[{start, end, value}]`
   format as *Current price*, so you can overlay every supplier on one ApexCharts chart.
-- **Estimated monthly cost — *supplier*** (e.g. `…_estimated_monthly_cost_repsol_leve_sem_mais`):
+- **Estimated monthly cost (*supplier*)** (e.g. `…_estimated_monthly_cost_repsol_leve_sem_mais`):
   - the API's `/v1/compare` cost of a standard ERSE consumption profile for the current month, at your monthly kWh
     and contracted power;
   - with the real VAT split (6% on the first 200 kWh at ≤ 6.9 kVA, 23% on the rest) when VAT is on;
