@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/Bytestay/ha-luz-indexada/compare/v0.4.0...v0.4.1) (2026-11-19)
+
+
+### Bug Fixes
+
+* entity names put the tariff in brackets ([#6](https://github.com/Bytestay/ha-luz-indexada/issues/6)) ([e08a97b](https://github.com/Bytestay/ha-luz-indexada/commit/e08a97b80bc7ddcdfe4a99cd344043df9f510395))
+
 ## [0.4.0](https://github.com/hybridforgelab/ha-luz-indexada/compare/v0.3.0...v0.4.0) (2026-10-26)
 
 
