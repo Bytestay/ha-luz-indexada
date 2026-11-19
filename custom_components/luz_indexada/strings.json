@@ -127,10 +127,10 @@
         "name": "RapidAPI requests remaining"
       },
       "tariff_average_today": {
-        "name": "Average price today — {tariff}"
+        "name": "Average price today ({tariff})"
       },
       "tariff_monthly_cost": {
-        "name": "Estimated monthly cost — {tariff}"
+        "name": "Estimated monthly cost ({tariff})"
       },
       "cheapest_supplier": {
         "name": "Cheapest supplier"

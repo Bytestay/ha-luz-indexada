@@ -127,10 +127,10 @@
         "name": "Pedidos RapidAPI restantes"
       },
       "tariff_average_today": {
-        "name": "Preço médio hoje — {tariff}"
+        "name": "Preço médio hoje ({tariff})"
       },
       "tariff_monthly_cost": {
-        "name": "Custo mensal estimado — {tariff}"
+        "name": "Custo mensal estimado ({tariff})"
       },
       "cheapest_supplier": {
         "name": "Fornecedor mais barato"
